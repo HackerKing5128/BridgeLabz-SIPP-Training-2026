@@ -1,0 +1,4 @@
+Sample data file for testing ReadFile program.
+This is line 2.
+This is line 3.
+Add more lines as needed for testing.

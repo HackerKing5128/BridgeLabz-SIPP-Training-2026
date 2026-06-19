@@ -1,0 +1,5 @@
+Milk - 60
+Bread - 40
+Eggs - 80
+Vegetables - 150
+Rice - 300
