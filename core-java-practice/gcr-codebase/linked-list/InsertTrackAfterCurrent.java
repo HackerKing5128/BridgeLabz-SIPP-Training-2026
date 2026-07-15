@@ -1,0 +1,41 @@
+public class InsertTrackAfterCurrent {
+    static class Node {
+        int val;
+        Node next;
+
+        public Node(int val) {
+            this.val = val;
+        }
+    }
+
+    public static void insertAfter(Node current, int trackId) {
+        if (current == null) {
+            return;
+        }
+
+        Node newNode = new Node(trackId);
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+
+    public static void printList(Node head) {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.val);
+            if (current.next != null) {
+                System.out.print(" -> ");
+            }
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+
+        insertAfter(head, 15);
+        printList(head);
+    }
+}
